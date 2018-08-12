@@ -84,6 +84,8 @@ img{
 }
 
 .days li {
+  font-family: "AppleGothic";
+  font-style: italic;
   list-style-type: none;
   display: inline-block;
   width: 13.6%;
