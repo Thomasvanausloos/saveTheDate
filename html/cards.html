@@ -8,219 +8,22 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="cards.css">
-    <style>
-        .mat-card {
-            transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
-            display: block;
-            position: relative;
-            padding: 24px;
-            border-radius: 2px
-        }
-
-        .mat-card:not([class*=mat-elevation-z]) {
-            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
-        }
-
-        .mat-card .mat-divider-horizontal {
-            position: absolute;
-            left: 0;
-            width: 100%
-        }
-
-        [dir=rtl] .mat-card .mat-divider-horizontal {
-            left: auto;
-            right: 0
-        }
-
-        .mat-card .mat-divider-horizontal.mat-divider-inset {
-            position: static;
-            margin: 0
-        }
-
-        [dir=rtl] .mat-card .mat-divider-horizontal.mat-divider-inset {
-            margin-right: 0
-        }
-
-        .mat-card.mat-card-flat {
-            box-shadow: none
-        }
-
-        @media screen and (-ms-high-contrast:active) {
-            .mat-card {
-                outline: solid 1px
-            }
-        }
-
-        .mat-card-actions,
-        .mat-card-content,
-        .mat-card-subtitle,
-        .mat-card-title {
-            display: block;
-            margin-bottom: 16px
-        }
-
-        .mat-card-actions {
-            margin-left: -16px;
-            margin-right: -16px;
-            padding: 8px 0
-        }
-
-        .mat-card-actions-align-end {
-            display: flex;
-            justify-content: flex-end
-        }
-
-        .mat-card-image {
-            width: calc(100% + 48px);
-            margin: 0 -24px 16px -24px
-        }
-
-        .mat-card-xl-image {
-            width: 240px;
-            height: 240px;
-            margin: -8px
-        }
-
-        .mat-card-footer {
-            display: block;
-            margin: 0 -24px -24px -24px
-        }
-
-        .mat-card-actions .mat-button,
-        .mat-card-actions .mat-raised-button {
-            margin: 0 4px
-        }
-
-        .mat-card-header {
-            display: flex;
-            flex-direction: row
-        }
-
-        .mat-card-header-text {
-            margin: 0 8px
-        }
-
-        .mat-card-avatar {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            flex-shrink: 0
-        }
-
-        .mat-card-lg-image,
-        .mat-card-md-image,
-        .mat-card-sm-image {
-            margin: -8px 0
-        }
-
-        .mat-card-title-group {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 -8px
-        }
-
-        .mat-card-sm-image {
-            width: 80px;
-            height: 80px
-        }
-
-        .mat-card-md-image {
-            width: 112px;
-            height: 112px
-        }
-
-        .mat-card-lg-image {
-            width: 152px;
-            height: 152px
-        }
-
-        @media (max-width:599px) {
-            .mat-card {
-                padding: 24px 16px
-            }
-            .mat-card-actions {
-                margin-left: -8px;
-                margin-right: -8px
-            }
-            .mat-card-image {
-                width: calc(100% + 32px);
-                margin: 16px -16px
-            }
-            .mat-card-title-group {
-                margin: 0
-            }
-            .mat-card-xl-image {
-                margin-left: 0;
-                margin-right: 0
-            }
-            .mat-card-header {
-                margin: -8px 0 0 0
-            }
-            .mat-card-footer {
-                margin-left: -16px;
-                margin-right: -16px
-            }
-        }
-
-        .mat-card-content>:first-child,
-        .mat-card>:first-child {
-            margin-top: 0
-        }
-
-        .mat-card-content>:last-child:not(.mat-card-footer),
-        .mat-card>:last-child:not(.mat-card-footer) {
-            margin-bottom: 0
-        }
-
-        .mat-card-image:first-child {
-            margin-top: -24px
-        }
-
-        .mat-card>.mat-card-actions:last-child {
-            margin-bottom: -16px;
-            padding-bottom: 0
-        }
-
-        .mat-card-actions .mat-button:first-child,
-        .mat-card-actions .mat-raised-button:first-child {
-            margin-left: 0;
-            margin-right: 0
-        }
-
-        .mat-card-subtitle:not(:first-child),
-        .mat-card-title:not(:first-child) {
-            margin-top: -4px
-        }
-
-        .mat-card-header .mat-card-subtitle:not(:first-child) {
-            margin-top: -8px
-        }
-
-        .mat-card>.mat-card-xl-image:first-child {
-            margin-top: -8px
-        }
-
-        .mat-card>.mat-card-xl-image:last-child {
-            margin-bottom: -8px
-        }
-    </style>
 </head>
 
 <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div style=" padding: 5%;">
         <div style=" width: 350px; height: 700px; -ms-transform: rotate(20deg); -webkit-transform: rotate(20deg); transform: rotate(20deg); position: relative; left: 30%; display: inline-block; background: white;">
-            <mat-card class="mat-card">
-                <mat-card-header class="mat-card-header" style=" display: block;">
-                    <mat-card-title class="mat-card-title" style="  font-family: 'AppleGothic'; font-style: italic; font-size: 35px; color: #4f5051;">
+            <mat-card style="transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1); display: block; position: relative;padding: 24px; border-radius: 2px;box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);">
+                <mat-card-header style=" display: block;">
+                    <mat-card-title style="display: block; margin-bottom: 16px;font-family: 'AppleGothic'; font-style: italic; font-size: 35px; color: #4f5051;">
                         SAVE THE DATE</mat-card-title>
-                    <mat-card-subtitle class="mat-card-subtitle" style="  font-family: 'AppleGothic'; font-style: italic; font-size: 20px; color: #4f5051; text-align: center;">ANNELORE
+                    <mat-card-subtitle style="display: block; margin-bottom: 16px; margin-top: -4px; font-family: 'AppleGothic'; font-style: italic; font-size: 20px; color: #4f5051; text-align: center;">ANNELORE
                         <span class="fa fa-heart" style="color: red;margin-left: 5px; margin-right: 5px;"></span>THOMAS</mat-card-subtitle>
                 </mat-card-header>
-                <img class="mat-card-image" src="https://mail.google.com/mail/u/0/?ui=2&ik=43c68a435d&view=fimg&th=1652a51e1aadac37&attid=0.1&disp=emb&attbid=ANGjdJ8fiJ1L9elJKTzorrejlWHo3DkyqrR-szSzGbLYpy2sIjntUd2cteJnRZuV7HZR7LgghEXIR7RzdRp8tGMkD8fW1o0aKv0y5eFFNDC7P9RVvQP36USmy0ydvmc&sz=s0-l75-ft&ats=1534013382944&rm=1652a51e1aadac37&zw&atsh=1"
-                    style=" width:280px; height: auto; margin-left: 10px; margin-right: 10px;">
-                <mat-card-content class="mat-card-content">
+                <img src="https://mail.google.com/mail/u/0/?ui=2&ik=43c68a435d&view=fimg&th=1652a51e1aadac37&attid=0.1&disp=emb&attbid=ANGjdJ8fiJ1L9elJKTzorrejlWHo3DkyqrR-szSzGbLYpy2sIjntUd2cteJnRZuV7HZR7LgghEXIR7RzdRp8tGMkD8fW1o0aKv0y5eFFNDC7P9RVvQP36USmy0ydvmc&sz=s0-l75-ft&ats=1534013382944&rm=1652a51e1aadac37&zw&atsh=1"
+                    style=" width:280px; height: auto; margin-left: 10px; margin-right: 10px; margin-bottom: 16px;">
+                <mat-card-content style="display: block; margin-bottom: 16px;">
                     <p style="margin-bottom: 0px;font-family: 'AppleGothic'; font-style: italic; font-size: 20px; color: #4f5051; text-align: center;">SEPTEMBER</p>
 
                     <ul style="  padding: 10px 0; margin: 0;">
@@ -274,16 +77,16 @@
             </mat-card>
         </div>
         <div style="width: 350px;  height: 500px; -ms-transform: rotate(-10deg); -webkit-transform: rotate(-10deg); transform: rotate(-10deg); position: relative; left: 31%; display: inline-block; z-index: -1;"
-        /div>>
+        /div>
             <div style="transform: translateY(-10%);">
-                <mat-card class="mat-card">
-                    <mat-card-header class="mat-card-header" style=" display: block;">
-                        <mat-card-title class="mat-card-title" style="  font-family: 'AppleGothic'; font-style: italic; font-size: 35px; color: #4f5051;">
+                <mat-card style="transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1); display: block; position: relative;padding: 24px; border-radius: 2px;box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);">
+                    <mat-card-header style=" display: block;">
+                        <mat-card-title style="display: block; margin-bottom: 16px; font-family: 'AppleGothic'; font-style: italic; font-size: 35px; color: #4f5051;">
                             SAVE THE DATE</mat-card-title>
-                        <mat-card-subtitle class="mat-card-subtitle" style="  font-family: 'AppleGothic'; font-style: italic; font-size: 20px; color: #4f5051; text-align: center;">ANNELORE
+                        <mat-card-subtitle style="display: block; margin-bottom: 16px; margin-top: -4px;font-family: 'AppleGothic'; font-style: italic; font-size: 20px; color: #4f5051; text-align: center;">ANNELORE
                             <span class="fa fa-heart" style="color: red;margin-left: 5px; margin-right: 5px;"></span>THOMAS</mat-card-subtitle>
                     </mat-card-header>
-                    <mat-card-content class="mat-card-content">
+                    <mat-card-content style="display: block; margin-bottom: 16px;">
                         <div style=" padding-top: 183px; padding-bottom: 183px;">
                             <p style="  font-family: 'AppleGothic'; font-style: italic; font-size: 16px; color: #4f5051; text-align: center;">Wij gaan trouwen en willen</p>
                             <p style="  font-family: 'AppleGothic'; font-style: italic; font-size: 16px; color: #4f5051; text-align: center;">jou/jullie er graag bij.</p>
