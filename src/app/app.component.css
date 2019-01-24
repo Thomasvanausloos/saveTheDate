@@ -1,7 +1,9 @@
 .container{
   padding: 5%;
 }
-
+.mat-card{
+  background: #faf6ef;
+}
 .left-card{
   width: 350px;
   height: 700px;
@@ -11,11 +13,11 @@
   position: relative;
   left: 30%;
   display: inline-block;
-  background: white;
+  background:white;
 
 }
 .right-card1{
-  transform: translateY(-10%);
+  transform: translateY(-10%) translateX(-20%);
 }
 
 .right-card{
@@ -61,8 +63,8 @@ img{
   text-align: center;
 }
 .text-container{
-  padding-top: 183px;
-  padding-bottom: 183px;
+  padding-top: 20px;
+  padding-bottom: 148px;
 }
 
 .heart {
